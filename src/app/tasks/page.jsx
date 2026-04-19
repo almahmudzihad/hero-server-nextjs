@@ -1,16 +1,22 @@
+import TasksCard from "@/components/TasksCard";
 import { getTasks } from "@/lib/tasks"
 
 
-const TasksPage = async  () =>{
-    const tasks = await getTasks()
-
+async function TasksPage() {
+    const tasks =await getTasks();
+    console.log(tasks);
     return (
         <div className="container mx-auto pt-10">
-            <h1>Tasks Page {tasks.length}</h1>
-            
+            <h1 className="text-3xl">Tasks {tasks.length}</h1>
+            {
+                tasks.map(taks => <TasksCard key={taks.id} task={taks} />)
+            }
+
         </div>
     )
-        
 }
 
 export default TasksPage
+
+
+

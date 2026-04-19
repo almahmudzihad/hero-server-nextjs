@@ -1,4 +1,4 @@
-import tasks from '../data/tasks.json'
+import tasks from '../data/tasks.json';
 
 export const getTasks = async () => {
 
