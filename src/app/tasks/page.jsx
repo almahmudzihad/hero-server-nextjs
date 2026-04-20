@@ -8,9 +8,11 @@ async function TasksPage() {
     return (
         <div className="container mx-auto pt-10">
             <h1 className="text-3xl">Tasks {tasks.length}</h1>
+            <div className="grid grid-cols-3 gap-4" >
             {
                 tasks.map(taks => <TasksCard key={taks.id} task={taks} />)
             }
+            </div>
 
         </div>
     )

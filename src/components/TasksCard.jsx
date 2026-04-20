@@ -1,17 +1,22 @@
 import { Card } from "@heroui/react";
 
-
-function TasksCard({task}) {
-    const {title, description} = task;
-    return (
-        <div>
-            
-            <Card className="w-[400px]">
-                
-                {title}
-            </Card>
-        </div>
-    )
+function TasksCard({ task }) {
+  const { title, description, status } = task;
+  return (
+    <div>
+      <Card className="" variant="tertiary">
+        <Card.Header>
+          <Card.Title>{title}</Card.Title>
+          <Card.Description>
+            {description}
+          </Card.Description>
+        </Card.Header>
+        <Card.Content>
+          <p>Status: {status}</p>
+        </Card.Content>
+      </Card>
+    </div>
+  );
 }
 
-export default TasksCard
+export default TasksCard;
