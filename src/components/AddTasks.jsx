@@ -7,7 +7,7 @@ import { Button, Input, Label, Modal, Surface, TextField, ListBox, Select } from
 export function AddTasks({ createATask }) {
   return (
     <Modal>
-      <Button variant="secondary">Open Contact Form</Button>
+      <Button variant="secondary">Add Task</Button>
       <Modal.Backdrop>
         <Modal.Container placement="auto">
           <Modal.Dialog className="sm:max-w-md">
@@ -86,7 +86,7 @@ export function AddTasks({ createATask }) {
                     <Button slot="close" variant="secondary">
                       Cancel
                     </Button>
-                    <Button type="submit" >
+                    <Button type="submit" variant="primary">
                       Submit Task
                     </Button>
                   </Modal.Footer>
