@@ -6,7 +6,7 @@ import { getTasks } from "@/lib/tasks"
 
 async function TasksPage() {
     const tasks =await getTasks();
-    console.log(tasks);
+    
     return (
         <div className="container mx-auto pt-10 text-center space-y-4">
             <h1 className="text-3xl">All Tasks {tasks.length}</h1>

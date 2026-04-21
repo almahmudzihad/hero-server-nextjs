@@ -4,3 +4,8 @@ export const getTasks = async () => {
 
     return tasks
 }
+export const postTasks = async (newTask) => {
+    newTask.id = tasks.length + 1 ;
+    tasks.push(newTask);
+    return {ok: true, message: 'Task created successfully'};
+}
