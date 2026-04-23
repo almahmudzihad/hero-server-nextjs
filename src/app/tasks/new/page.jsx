@@ -10,7 +10,7 @@ const NewTask = () => {
       <h1 className="text-3xl font-bold underline mb-4 text-center">New Task</h1>
       <Form action={newTaksAction} className="flex flex-col gap-4">
         <TextField isRequired className="w-full" name="title" type="text">
-          <Label>Title</Label>
+          <Label>Title req</Label>
           <Input placeholder="Enter your Task title" />
         </TextField>
         <TextField className="w-full" name="description" type="text">
