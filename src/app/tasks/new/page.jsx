@@ -1,15 +1,15 @@
 
 import { newTaksAction} from "@/lib/action";
 
-import { Button, Input, Label, ListBox, TextField, Select } from "@heroui/react";
+import { Button, Input, Label, ListBox, TextField, Select, Form } from "@heroui/react";
 
 
 const NewTask = () => {
   return (
     <div className="w-1/4 mx-auto pt-10">
       <h1 className="text-3xl font-bold underline mb-4 text-center">New Task</h1>
-      <form action={newTaksAction} className="flex flex-col gap-4">
-        <TextField className="w-full" name="title" type="text">
+      <Form action={newTaksAction} className="flex flex-col gap-4">
+        <TextField isRequired className="w-full" name="title" type="text">
           <Label>Title</Label>
           <Input placeholder="Enter your Task title" />
         </TextField>
@@ -76,7 +76,7 @@ const NewTask = () => {
             Submit Task
           </Button>
         
-      </form>
+      </Form>
     </div>
   );
 };
